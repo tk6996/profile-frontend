@@ -1,0 +1,126 @@
+a {
+  text-decoration: none;
+  color: #00aaff;
+}
+
+a:hover {
+  color: #00eeff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+  height: 25px;
+  font-size: 16px;
+}
+
+label {
+  height: 25px;
+  line-height: 30px;
+  padding: 3px;
+}
+
+input[type="submit"],
+input[type="button"] {
+  background-color: #efefef;
+  border-color: #999;
+  border-radius: 5px;
+}
+
+input[type="submit"]:focus,
+input[type="button"]:focus {
+  outline-width: 0;
+}
+
+input[type="submit"]:focus:active,
+input[type="button"]:focus:active {
+  transform: scale(0.9, 0.9);
+  outline-width: 1px;
+}
+
+.container {
+  margin: 30px 100px;
+  padding: auto;
+}
+
+.form-filed {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-name {
+  width: 100px;
+}
+
+.form-value {
+  width: 60%;
+}
+
+.form-name,
+.form-value {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.form-name > *,
+.form-value > * {
+  margin: 3px;
+}
+
+.form-button {
+  margin-top: 15px;
+}
+
+.form-button > * {
+  padding: 5px;
+  width: 70px;
+  margin: 3px;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #777777;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+table.table-profile,
+.table-profile th,
+.table-profile td {
+  border: 1px solid black;
+  margin: auto;
+}
+
+table.table-profile {
+  border-collapse: collapse;
+  width: 70%;
+}
+
+.table-profile th,
+.table-profile td {
+  height: 20px;
+  padding: 15px;
+}
+
+.table-profile th {
+  background-color: #c540af;
+  color: #fff;
+}
