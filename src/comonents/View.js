@@ -14,13 +14,14 @@ export default function View() {
   const [loading, setLoading] = useState(false);
   const [profile, setProfile] = useState({});
   useEffect(() => {
+    let mounted = true;
     const fetchData = async () => {
-      setLoading(true);
+      mounted && setLoading(true);
       try {
         let result = await axios.get(
           "http://localhost:7000/api/view" + location.search
         );
-        if (result.data.find) setProfile(result.data);
+        if (result.data.find && mounted) setProfile(result.data);
         else {
           activeFlash(dispatch, ERROR, "Could not load profile");
           history.push("/");
@@ -28,9 +29,12 @@ export default function View() {
       } catch (error) {
         console.error(error);
       }
-      setLoading(false);
+      mounted && setLoading(false);
     };
     fetchData();
+    return () => {
+      mounted = false;
+    };
   }, [location, history, dispatch]);
 
   return (

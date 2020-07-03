@@ -124,3 +124,42 @@ table.table-profile {
   background-color: #c540af;
   color: #fff;
 }
+
+.input-auto-complete {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.auto-complete {
+  position: absolute;
+  display: none;
+  background-color: #f8f8f8;
+  top: 100%;
+  width: 100%;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.auto-complete > .auto-word-bar {
+  height: 25px;
+  font-size: 16px;
+  padding: 3px;
+  align-items: center;
+  border: 1px solid #999999;
+  border-top: 0;
+  line-height: 25px;
+}
+
+.input-auto-complete:focus-within .auto-complete,
+.auto-complete:active {
+  display: block;
+  cursor: pointer;
+}
+
+.auto-word-bar:hover {
+  background-color: #fff;
+  border: 2px solid #00c5ff;
+  color: #00c5ff;
+  font-weight: bold;
+}

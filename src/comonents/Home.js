@@ -36,7 +36,7 @@ const Home = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    let timeout = setTimeout(fetchAllProfile, 10000);
+    let timeout = setTimeout(fetchAllProfile, 5000);
     return () => {
       clearTimeout(timeout);
     };
