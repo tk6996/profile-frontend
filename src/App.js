@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "./comonents/Home";
-import Login from "./comonents/Login";
-import View from "./comonents/View";
-import Add from "./comonents/Add";
-import Edit from "./comonents/Edit";
-import NotLogin from "./comonents/NotLogin";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import View from "./components/View";
+import Add from "./components/Add";
+import Edit from "./components/Edit";
+import NotLogin from "./components/NotLogin";
+import Delete from "./components/Delete";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { LOGIN, LOGOUT } from "./actions/user.action";
 import "./Styles.css";
-import Delete from "./comonents/Delete";
 function App() {
   const dispatch = useDispatch();
   const user = useSelector(({ UserReducer }) => UserReducer);
